@@ -1,6 +1,6 @@
 ## This fork is a work in progress that adds support for the ATSAMD21E16C WLCSP35 variant as part of the DragonInjector project.
 
-#Welcome to OpenOCD!
+# Welcome to OpenOCD!
 ===================
 
 OpenOCD provides on-chip programming and debugging support with a
@@ -28,9 +28,7 @@ This README file contains an overview of the following topics:
 - packaging tips.
 
 
-============================
-Quickstart for the impatient
-============================
+## Quickstart for the impatient
 
 If you have a popular board then just start OpenOCD with its config,
 e.g.:
@@ -52,9 +50,7 @@ After OpenOCD startup, connect GDB with
   (gdb) target extended-remote localhost:3333
 
 
-=====================
-OpenOCD Documentation
-=====================
+## OpenOCD Documentation
 
 In addition to the in-tree documentation, the latest manuals may be
 viewed online at the following URLs:
@@ -73,8 +69,7 @@ by subscribing to the OpenOCD developer mailing list:
 
 	openocd-devel@lists.sourceforge.net
 
-Building the OpenOCD Documentation
-----------------------------------
+## Building the OpenOCD Documentation
 
 By default the OpenOCD build process prepares documentation in the
 "Info format" and installs it the standard way, so that "info openocd"
@@ -96,9 +91,7 @@ architecture and other details about the code:
   make doxygen && ${HTMLVIEWER} doxygen/index.html
 
 
-==================
-Supported hardware
-==================
+## Supported hardware
 
 JTAG adapters
 -------------
@@ -133,9 +126,7 @@ AT91SAM9, LPC3180, LPC32xx, i.MX31, MXC, NUC910, Orion/Kirkwood, S3C24xx,
 S3C6400, XMC1xxx, XMC4xxx.
 
 
-==================
-Installing OpenOCD
-==================
+## Installing OpenOCD3
 
 A Note to OpenOCD Users
 -----------------------
@@ -185,9 +176,7 @@ suggestions:
 - Use "ftdi" interface adapter driver for the FTDI-based devices.
 
 
-================
-Building OpenOCD
-================
+## Building OpenOCD
 
 The INSTALL file contains generic instructions for running 'configure'
 and compiling the OpenOCD source code. That file is provided by
@@ -197,8 +186,7 @@ the GNU autotools, then you should read those instructions first.
 The remainder of this document tries to provide some instructions for
 those looking for a quick-install.
 
-OpenOCD Dependencies
---------------------
+## OpenOCD Dependencies
 
 GCC or Clang is currently required to build OpenOCD. The developers
 have begun to enforce strict code warnings (-Wall, -Werror, -Wextra,
@@ -230,8 +218,7 @@ drivers need:
 
 CMSIS-DAP support needs HIDAPI library.
 
-Permissions delegation
-----------------------
+## Permissions delegation
 
 Running OpenOCD with root/administrative permissions is strongly
 discouraged for security reasons.
@@ -248,8 +235,7 @@ For parport adapters on Windows you need to run install_giveio.bat
 (it's also possible to use "ioperm" with Cygwin instead) to give
 ordinary users permissions for accessing the "LPT" registers directly.
 
-Compiling OpenOCD
------------------
+## Compiling OpenOCD
 
 To build OpenOCD, use the following sequence of commands:
 
@@ -267,8 +253,7 @@ the files in the required location.
 To see the list of all the supported options, run
   ./configure --help
 
-Cross-compiling Options
------------------------
+## Cross-compiling Options
 
 Cross-compiling is supported the standard autotools way, you just need
 to specify the cross-compiling target triplet in the --host option,
@@ -286,8 +271,7 @@ libraries that OpenOCD depends on. Alternatively, you can specify
 *_CFLAGS and *_LIBS environment variables directly, see "./configure
 --help" for the details.
 
-Parallel Port Dongles
----------------------
+## Parallel Port Dongles
 
 If you want to access the parallel port using the PPDEV interface you
 have to specify both --enable-parport AND --enable-parport-ppdev, since the
@@ -299,9 +283,7 @@ if you want to use giveio instead of ioperm parallel port access
 method.
 
 
-==========================
-Obtaining OpenOCD From GIT
-==========================
+## Obtaining OpenOCD From GIT
 
 You can download the current GIT version with a GIT client of your
 choice from the main repository:
